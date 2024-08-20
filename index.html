@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Educação Ambiental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">&#9776;</div>
+        <a href="#" class="logo-link" onclick="showContent('home'); closeSidebar()">
+            <img src="logo.png" alt="Logo Ambiental Education" class="logo">
+        </a>
+        <span class="site-name">Ambiental Education</span>
+    </header>
+    
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showContent('home'); closeSidebar()">Home</a></li>
+            <li><a href="#" onclick="showContent('recursos'); closeSidebar()">Recursos Educativos</a></li>
+            <li><a href="#" onclick="showContent('projetos'); closeSidebar()">Projetos DIY</a></li>
+        </ul>
+        <div class="theme-toggle" onclick="toggleTheme(); closeSidebar()">
+            <span>Mudar para tema <span id="theme">escuro</span></span>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <main>
+        <section id="home" class="content">
+            <p class="welcome-message">Bem-vindo ao nosso portal dedicado à educação ambiental.</p>
+            <img src="portal-image.jpg" alt="Imagem do Portal" class="portal-image">
+            <div class="eco-tips">
+                <h3>Dicas de Eco-Tips</h3>
+                <div class="eco-tip">
+                    <h4>Dica 1</h4>
+                    <p>Reduza o consumo de plástico, optando por sacolas reutilizáveis.</p>
+                </div>
+                <div class="eco-tip">
+                    <h4>Dica 2</h4>
+                    <p>Economize água fechando a torneira enquanto escova os dentes.</p>
+                </div>
+                <div class="eco-tip">
+                    <h4>Dica 3</h4>
+                    <p>Recicle e separe corretamente os resíduos orgânicos e recicláveis.</p>
+                </div>
+            </div>
+            <div class="eco-products">
+                <h3>Produtos Ecológicos</h3>
+                <div class="eco-product">
+                    <img src="garrafa-agua.jpg" alt="Garrafa de Água Reutilizável">
+                    <h4>Garrafa de Água Reutilizável</h4>
+                    <p>Mantenha-se hidratado com garrafa de água reutilizável, ideal para reduzir o uso de plástico.</p>
+                    <a href="#" onclick="showContent('produto-garrafa')">Saiba mais</a>
+                </div>
+                <div class="eco-product">
+                    <img src="carregador-solar.jpg" alt="Carregadores Solares Portáteis">
+                    <h4>Carregadores Solares Portáteis</h4>
+                    <p>Carregue seus dispositivos eletrônicos usando energia solar com nossos carregadores portáteis.</p>
+                    <a href="#" onclick="showContent('produto-carregador')">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="content" style="display: none;">
+    <h3>Recursos Educativos</h3>
+    <article>
+        <h3>Impactos das Mudanças Climáticas</h3>
+        <p>Entenda os efeitos das mudanças climáticas no nosso planeta.</p>
+        <img src="impactos-mudancas-climaticas.jpg" alt="Infográfico sobre impactos das mudanças climáticas" class="resource-image">
+    </article>
+    <div class="resource-card">
+        <h4>Guia de Sustentabilidade</h4>
+        <p>Explore práticas de sustentabilidade que você pode adotar em seu dia a dia para reduzir seu impacto ambiental.</p>
+        <a href="#" onclick="showContent('guia-sustentabilidade')">Saiba mais</a>
+    </div>
+</section>
+
+        <section id="projetos" class="content" style="display: none;">
+            <h3>Projetos DIY</h3>
+            <p>Explore projetos "faça você mesmo" para se envolver mais com a natureza e o meio ambiente.</p>
+            <article>
+                <h4>Composte em Casa</h4>
+                <p>Aprenda a criar uma composteira caseira para transformar resíduos orgânicos em adubo.</p>
+                <img src="compostagem.jpg" alt="Composteira Caseira" class="resource-image">
+                <h5>Passo a Passo:</h5>
+                <ol>
+                    <li>Escolha um recipiente com tampa.</li>
+                    <li>Faça furos no recipiente para ventilação.</li>
+                    <li>Adicione uma camada de materiais secos como folhas secas.</li>
+                    <li>Coloque resíduos orgânicos como restos de frutas e vegetais.</li>
+                    <li>Adicione uma camada de materiais úmidos como café usado.</li>
+                    <li>Mexa a mistura regularmente e mantenha o recipiente fechado.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="produto-garrafa" class="content" style="display: none;">
+            <h1>Garrafa de Água Reutilizável</h1>
+            <img src="garrafa-agua.jpg" alt="Garrafa de Água Reutilizável" class="product-image">
+            <p>A Garrafa de Água Reutilizável é ideal para reduzir o uso de plástico descartável. Feita de materiais sustentáveis e com um design prático, ela mantém sua bebida fresca e é fácil de transportar.</p>
+            <h2>Benefícios:</h2>
+            <ul>
+                <li>Redução do uso de plástico descartável</li>
+                <li>Material sustentável e durável</li>
+                <li>Design prático e fácil de transportar</li>
+            </ul>
+            <a href="#" onclick="showContent('home')" class="back-button">Voltar</a>
+        </section>
+
+        <section id="guia-sustentabilidade" class="content" style="display: none;">
+    <h1>Guia de Sustentabilidade</h1>
+    <p>Este guia oferece uma visão abrangente sobre práticas sustentáveis que você pode adotar em seu dia a dia. A sustentabilidade é crucial para preservar nossos recursos naturais e garantir um futuro melhor para as próximas gerações.</p>
+    
+    <div class="info-cards">
+        <div class="info-card">
+            <h4>Redução de Desperdícios</h4>
+            <p>Dicas para minimizar o desperdício de alimentos e outros recursos em sua vida cotidiana. Inclui práticas simples e eficazes que podem ser incorporadas facilmente no seu dia a dia.</p>
+        </div>
+        <div class="info-card">
+            <h4>Uso Eficiente de Recursos Naturais</h4>
+            <p>Sugestões para utilizar água, energia e outros recursos de forma mais eficiente. Descubra como pequenas mudanças podem ter um grande impacto na preservação dos nossos recursos.</p>
+        </div>
+        <div class="info-card">
+            <h4>Consumo Consciente</h4>
+            <p>Orientações sobre como fazer escolhas de compra que reduzam o impacto ambiental. Aprenda a identificar produtos sustentáveis e a reduzir seu impacto através do consumo responsável.</p>
+        </div>
+    </div>
+    
+    <p>Além disso, este guia inclui estratégias para reduzir sua pegada ecológica, como compostagem, reciclagem e alternativas sustentáveis para produtos de uso diário.</p>
+    <a href="#" onclick="showContent('recursos')" class="back-button">Voltar</a>
+</section>
+        
+        <section id="produto-carregador" class="content" style="display: none;">
+            <h1>Carregadores Solares Portáteis</h1>
+            <img src="carregador-solar.jpg" alt="Carregadores Solares Portáteis" class="product-image">
+            <p>Nossos carregadores solares portáteis permitem carregar seus dispositivos eletrônicos usando energia solar. Ideais para atividades ao ar livre e emergências.</p>
+            <h2>Benefícios:</h2>
+            <ul>
+                <li>Utiliza energia solar renovável</li>
+                <li>Portátil e fácil de usar</li>
+                <li>Ideal para atividades ao ar livre</li>
+            </ul>
+            <a href="#" onclick="showContent('home')" class="back-button">Voltar</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ambiental Education. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Toggle do menu lateral
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const menuToggle = document.getElementById('menuToggle');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+                overlay.style.display = 'none';
+                menuToggle.style.display = 'block';
+            } else {
+                sidebar.style.left = '0';
+                overlay.style.display = 'block';
+                menuToggle.style.display = 'none';
+            }
+        }
+
+        // Fechar o menu lateral
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const menuToggle = document.getElementById('menuToggle');
+            sidebar.style.left = '-250px';
+            overlay.style.display = 'none';
+            menuToggle.style.display = 'block';
+        }
+
+        // Toggle entre temas claro e escuro
+        function toggleTheme() {
+            const body = document.body;
+            const themeSpan = document.getElementById('theme');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeSpan.innerText = 'claro';
+            } else {
+                themeSpan.innerText = 'escuro';
+            }
+        }
+
+        // Mostrar conteúdo correspondente à aba
+        function showContent(sectionId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Exibir a aba "Home" ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            showContent('home');
+        });
+    </script>
+</body>
+</html>

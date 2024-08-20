@@ -1,0 +1,370 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh; /* Garante que o body tenha altura mínima */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para o header */
+header {
+    background-color: #4CAF50; /* Verde claro */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilo para a logo */
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilo para o nome do site */
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex: 1; /* Faz o nome do site ocupar o espaço disponível entre o menu e a logo */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante disponível */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinhamento centralizado */
+    padding: 20px;
+}
+
+/* Estilo para a seção home */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.welcome-message {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.portal-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px; /* Bordas arredondadas iguais aos infográficos */
+}
+
+/* Estilo para a seção Eco-Tips */
+.eco-tips {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; /* Define uma largura máxima para a seção de dicas */
+    padding: 10px;
+}
+
+.eco-tips h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Cor do título */
+    text-align: center;
+}
+
+.eco-tip {
+    background-color: #e0f2f1; /* Cor clara para o tema claro */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordas mais arredondadas */
+}
+
+.eco-tip h4 {
+    margin: 0 0 5px;
+}
+
+.eco-tip p {
+    color: #333; /* Cor do texto para o tema claro */
+}
+
+/* Estilo para a seção Produtos Ecológicos */
+.eco-products {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; /* Define uma largura máxima para a seção de produtos */
+    padding: 10px;
+}
+
+.eco-products h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Cor do título */
+    text-align: center;
+}
+
+.eco-product {
+    background-color: #f1f8f6; /* Cor clara para o tema claro */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    text-align: center;
+}
+
+.eco-product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas iguais aos infográficos */
+}
+
+.eco-product h4 {
+    margin: 10px 0 5px;
+}
+
+.eco-product p {
+    margin: 0 0 10px;
+}
+
+.eco-product a {
+    color: #4CAF50; /* Cor do link */
+    text-decoration: none;
+}
+
+.eco-product a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para páginas de detalhes de produtos */
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px; /* Diminuído para footer mais slim */
+    position: relative; /* Alterado para relative */
+    width: 100%;
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+/* Estilo para o menu lateral */
+aside.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 20;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background-color: #575757;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo para o overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 15;
+}
+
+/* Estilo para o botão de mudar tema no menu lateral */
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para o tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header, body.dark-mode aside, body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .sidebar ul li {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .eco-tip {
+    background-color: #333; /* Cor escura para dicas no tema escuro */
+    color: #e0e0e0; /* Cor do texto para o tema escuro */
+}
+
+body.dark-mode .eco-tip h4 {
+    color: #e0e0e0; /* Cor dos títulos dentro dos cards de dicas no tema escuro */
+}
+
+body.dark-mode .eco-tip p {
+    color: #e0e0e0; /* Cor dos parágrafos dentro dos cards de dicas no tema escuro */
+}
+
+body.dark-mode .eco-product {
+    background-color: #333; /* Cor escura para produtos no tema escuro */
+    color: #e0e0e0; /* Cor do texto para o tema escuro */
+}
+
+body.dark-mode .resource-card {
+    background-color: #333; /* Fundo escuro para o tema escuro */
+    color: #e0e0e0; /* Texto claro para o tema escuro */
+}
+
+body.dark-mode .resource-card h4,
+body.dark-mode .resource-card p {
+    color: #e0e0e0; /* Cor do texto dos títulos e parágrafos no tema escuro */
+}
+
+body.dark-mode .info-card {
+    background-color: #333; /* Fundo escuro para o tema escuro */
+    color: #e0e0e0; /* Texto claro para o tema escuro */
+}
+
+/* Estilo para imagens dos infográficos */
+.resource-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para o card de recursos */
+.resource-card {
+    background-color: #e0f2f1; /* Cor clara para o tema claro */
+    color: #333; /* Cor do texto para o tema claro */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.resource-card h4, .resource-card p {
+    color: #333; /* Cor do texto para o tema claro */
+}
+
+/* Estilo para os cards de informação */
+.info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards */
+}
+
+.info-card {
+    background-color: #e0f2f1; /* Cor clara para o tema claro */
+    color: #333; /* Cor do texto para o tema claro */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 300px; /* Largura máxima dos cards */
+}
+
+.info-card h4 {
+    margin-top: 0;
+}
+
+.info-card p {
+    margin-bottom: 0;
+}
+
+/* Estilo para os links */
+a {
+    color: #4CAF50; /* Cor do link no tema claro */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o botão de voltar */
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
